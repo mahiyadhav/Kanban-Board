@@ -1,0 +1,142 @@
+
+body {
+    font-family: "GT Walsheim", normal;
+    background-color: #FFFFFF;
+  }
+/* IconStyle the side navigation */
+
+.IconnavBG {
+   
+    width: 60px;
+    /*height: 982px;*/
+    height: 100%;
+    left: 0px;
+    top: 0px;
+   overflow-x: hidden;
+    box-sizing: border-box;
+
+    position: absolute;
+    
+    z-index: 1;
+    /* Neutral/White/100% */
+
+    background: #FFFFFF;
+    /* Border/Light */
+
+    border-right: 1px solid #EAEDF0;
+  }
+  
+  .IconnavBG .logo {
+    /* logoMark */
+    position:relative;
+    left: 1.37%;
+    right: 96.65%;
+    padding: 16px;
+    top: 1.43%;
+  }
+  .IconnavBG .line {
+    
+    width: 65%;
+    margin: 0px auto 10px auto;
+    border-bottom: 1px solid #E9EBEF;
+  }
+  /* IconSide navigation links */
+
+  .Iconsidenav {
+    width: 56px; /* Set a width if you like */
+  }
+  .Iconsidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+  
+  .Iconsidenav a:hover {
+    /* Project 01 */
+    /*box-sizing: border-box;*/
+
+    /* Auto layout */
+
+    /*display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 8px; */
+
+    width: 32px;
+    height: 32px;
+
+    background: rgba(83, 59, 229, 0.05);
+    border: 1px solid #533BE5;
+    border-radius: 8px;
+
+    /* Inside auto layout 
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;*/
+  }
+  /* Change color on hover */
+  .Iconsidenav a .select {
+     /* Active Indicator */
+     position: absolute;
+     width: 2px;
+     height: 23.02px;
+     left: 0px;
+     /*top: 69.05px; */
+ 
+     background: #533BE5;
+     border-radius: 0px 8px 8px 0px;
+  }
+  .Iconsidenav .imgBG {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 8px;
+
+    width: 32px;
+    height: 32px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    
+    margin: 0px auto 20px auto;
+    /* Inside auto layout */
+
+    /*flex: none;
+    order: 0;
+    flex-grow: 0;*/
+
+  }
+  .secondCol {
+   
+    width: 245px;
+    /*height: 982px;*/
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    position: absolute;
+    
+   /* z-index: 1;*/
+    /* Neutral/White/100% */
+
+    background: #FFFFFF;
+    /* Border/Light */
+
+    border-right: 1px solid #F4F4F4;
+  }
+  
+  /* Style the content */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+  }
