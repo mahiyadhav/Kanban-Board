@@ -1,10 +1,16 @@
-
+@font-face {
+  font-family: 'GT Walsheim'; /*this is what you put on your font family*/
+  src: url('fonts/GTWalsheimProRegular.ttf'); /*Link to the font*/
+}
 body {
     font-family: "GT Walsheim", normal;
     background-color: #FFFFFF;
   }
 /* IconStyle the side navigation */
-
+.divleft{
+  float: left;
+  padding-left: 2px; 
+}
 .IconnavBG {
    
     width: 60px;
@@ -125,8 +131,8 @@ body {
     box-sizing: border-box;
 
     position: absolute;
-    
-   /* z-index: 1;*/
+    margin-left: 56px;
+   /* z-index: 1; */
     /* Neutral/White/100% */
 
     background: #FFFFFF;
@@ -134,7 +140,70 @@ body {
 
     border-right: 1px solid #F4F4F4;
   }
-  
+  .secondCol .title{
+    width: 244px;
+    height: 56;
+    /* padding-left: 60px; */
+    margin: auto;
+     margin: 0px auto 10px auto;
+  }
+  .secondCol h1{
+    padding: 16px 16px 4px 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    letter-spacing: 0.2px;
+
+    color: #292938;
+  }
+
+  .Level-Div {
+    position: absolute;
+    width: 245px;
+    height: 54px;
+    padding: 10px;
+    border-bottom: 1px solid #E9EBEF;
+  }
+  .LevelTextBG{
+    width: 240px;
+    height: 16px;
+  }
+  .LevelTextBG .LevelText {
+    position: relative;
+    display:flexbox;
+    width: 80px;
+    height: 16px;
+    /* padding: 10px; */
+  }
+  .LevelTextBG .LevelText img{
+    float: left;
+    margin: auto;
+    padding: 5;
+    }
+  .LevelTextBG .LevelText p{
+    width: 40px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    margin: auto;
+    /* identical to box height, or 133% */
+    /* letter-spacing: 0.2px; */
+
+    /* Neutral/Black/100 */
+
+    color: #191925;
+
+  }
+  /* .LevelPercentage {
+
+    width: 70px;
+    height: 16px;
+    border: 1px solid #533BE5;
+  } */
   /* Style the content */
   .content {
     margin-left: 200px;
