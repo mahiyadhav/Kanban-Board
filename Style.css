@@ -2,7 +2,13 @@
   font-family: 'GT Walsheim'; /*this is what you put on your font family*/
   src: url('fonts/GTWalsheimProRegular.ttf'); /*Link to the font*/
 }
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
 body {
+    box-sizing: border-box;
     font-family: "GT Walsheim", normal;
     background-color: #FFFFFF;
   }
@@ -56,7 +62,7 @@ body {
     padding: 16px;
     text-decoration: none;
     display: block;
-    
+    border: 1px solid #F5F5F5;
   }
   
   .Iconsidenav a:hover {
@@ -163,33 +169,28 @@ body {
   .Level-Div {
     position: absolute;
     width: 245px;
-    height: 54px;
+    height: 64px;
     padding: 10px;
     border-bottom: 1px solid #E9EBEF;
   }
   .LevelTextBG{
     width: 240px;
     height: 16px;
+    
   }
-  .LevelTextBG .LevelText {
-    position: relative;
-    display:flexbox;
-    width: 80px;
-    height: 16px;
-    /* padding: 10px; */
-  }
-  .LevelTextBG .LevelText img{
+  .LevelTextBG img{
     float: left;
     margin: auto;
-    padding: 5;
     }
-  .LevelTextBG .LevelText p{
+  .LevelTextBG .levels{
+    
     width: 40px;
     height: 16px;
     font-weight: 700;
     font-size: 12px;
-    line-height: 16px;
+    /* line-height: 16px; */
     margin: auto;
+    text-align: left;
     /* identical to box height, or 133% */
     /* letter-spacing: 0.2px; */
 
@@ -199,13 +200,182 @@ body {
 
   }
   /* .LevelPercentage {
-
+    float: left;
     width: 70px;
     height: 16px;
+    text-align: right;
     border: 1px solid #533BE5;
   } */
+  .LevelPercentage {
+    width: 150px;
+    height: 16px;
+    text-align: right;
+    color: #7F8995;
+    /* border: 1px solid #533BE5; */
+  }
+  .Barcontainer {
+    position: absolute;
+    width: 216px;
+    height: 8px;
+    /* Neutral/Black/20 */
+    margin-top: 10px;
+    background: #F2F5F7;
+    border-radius: 40px;
+  }
+  .Barcontainer .Bar-col {
+    background: #4734FE;
+    border-radius: 40px;
+    background-image: linear-gradient(
+      -20deg, 
+      rgba(255, 255, 255, 0.16) 25%, 
+      transparent 20%, 
+      transparent 50%, 
+      rgba(255, 255, 255, 0.16) 50%, 
+      rgba(255, 255, 255, 0.16) 75%, 
+      transparent 75%, 
+      transparent 100%
+    );
+    z-index: 1;
+    animation: move 2s linear infinite;
+    overflow: hidden;
+  }
+ .verticalNav {
+  position: fixed;
+  width: 245px;
+  height: 100%;
+  left: 56px;
+  top: 260px;
+  /* background: #F2F5F7; */
+
+ }
+ .menuNav nav ul {
+  /* background:#ffffff; */
+  height: 100%;
+  width: 100%;
+  list-style: none;
+ }
+ .menuNav nav ul li{
+  line-height: 25px;
+  font-size: 14px;
+  /* identical to box height, or 114% */
+  letter-spacing: 0.2px;
+  
+ }
+ .menuNav nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  color: #6C6F75;
+    padding-left: 20px;
+  /* padding-bottom: 20px; */
+  /* margin: 9px; */
+  /* margin-top: 20px;  */
+  margin-bottom: 20px;
+  font-weight: 500;
+  display: block;
+  /* width: 100%; */
+  /* border-bottom: 1px solid #919397; */
+ }
+ .menuNav nav ul li a img{
+  position: relative;
+  top: 50%;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  /* padding-right: 8px; */
+  /* background-color: #292938; */
+  /* padding-top: 2px; */
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* place-items: center; */
+ }
+ .menuNav nav ul li a span img{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  -webkit-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+ }
+ /* .menuNav nav ul li a:hover span img{
+  -moz-transform: translateY(-50%) rotate(90deg );
+  -ms-transform: translateY(-50%) rotate(90deg );
+  -webkit-transform: translateY(-50%) rotate(90deg );
+  transform: translateY(-50%) rotate(90deg );
+ } */
+
+ .menuNav nav ul li a span img.rotatearrow{
+  -moz-transform: translateY(-50%) rotate(90deg );
+  -ms-transform: translateY(-50%) rotate(90deg );
+  -webkit-transform: translateY(-50%) rotate(90deg );
+  transform: translateY(-50%) rotate(90deg );
+ }
+ .menuNav nav ul ul {
+  position: static;
+  display: none;
+ }
+ .menuNav nav ul li ul li a{
+  font-size: 13px;
+  color: #919397;
+  padding-left: 35px;
+  margin-bottom: 7px;
+ }
+ .menuNav nav ul li ul li a:hover{
+  background: #F2F5F7;
+  border-radius: 40px;
+ }
+
+ .menuNav nav ul .people-show.showpeoplechild {
+  display: block;
+
+ }
+ .menuNav nav ul .Code-show.showcodechild {
+  display: block;
+
+ }
+ .menuNav nav ul .Cloud-show.showcloudchild {
+  display: block;
+
+ }
+ .menuNav nav ul .Team-show.showteamchild {
+  display: block;
+
+ }
+ .menuNav nav ul .Global-show.showglobalchild {
+  display: block;
+
+ }
+ .menuNav nav ul .Anal-show.showanalchild {
+  display: block;
+
+ }
+ /* .menuNav nav ul li a:hover ul{
+  display: none;
+
+ } */
+ .menuNav.fa-caret-right {
+  content: "\f0da"
+ }
   /* Style the content */
   .content {
     margin-left: 200px;
     padding-left: 20px;
   }
+  
+  /* .fa{
+    display:inline-block;
+    font:normal normal normal 14px/1 FontAwesome;
+    font-size:inherit;
+    text-rendering:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  fa-home:before{
+    content:"\f015"
+  } */

@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban Board</title>
     <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
-    
-    <div class="IconnavBG">
+    <div class="IconnavCol divleft">
+    <div class="IconnavBG ">
         <div class="logo">
             <a href="#"><img src="Images/logoicon.png" alt="Kanban Board" style="width:23px;height:31px;"></a>
             
@@ -25,11 +26,132 @@
         </div>
         
     </div>
-  
-    <div class="secondCol">
-        <h1>second</h1>
+</div>
+    <div class="secondCol divleft">
+       <div class="title">
 
-    </div>
+        <h1>Project Name</h1>
+        
+       </div>
+       <div>
+        <img src="Images/BannerImage.jpg" alt="" style="width: 244px;height: 108px;">
+       </div>
+       <div class="Level-Div">
+        <div class="LevelTextBG">
+         <table>
+            <tr>
+                <td>
+                    <img src="Images/LevelIcon.png" alt="" style="width: 12.45px;height: 14.34px;">
+                </td>
+                <td>
+                    <p id="Level" class="levels">Level 1</p>
+                </td>
+                <td>
+                    <p id="ProgressBar" class="LevelPercentage">40%</p>
+                </td>
+            </tr>
+         </table>
+         <div class="Barcontainer">
+            <div id="myBar" class="Bar-col" style="height:8px;width:40%"></div>
+
+         </div>
+            
+            
+        </div>
+
+       </div>
+       <div class="menuNav">
+        <nav class="verticalNav">
+            <ul>
+                <li><a href="# " class="people-btn"><img src="Images/people.png" alt="">Community
+                    <span ><img class="subnav1" src="Images/Righ-Arrow.png" alt="" style="width: 8px;height: 8px;"></span>
+                </a>
+                    <ul class="people-show">
+                        <li> <a href="#">Profile</a></li>
+                        <li> <a href="#">Issues</a></li> 
+                        <li> <a href="#">Pull Request</a></li>
+                        <li> <a href="#">Discussions</a></li>
+                    </ul>
+
+                </li>
+                <li> <a href="# " class="code-btn"><img src="Images/CodeCircleIcon.png" alt="">Code
+                    <span ><img class="subnav2" src="Images/Righ-Arrow.png" alt="" style="width: 8px;height: 8px;"></span>
+                </a>
+                    <ul class="Code-show">
+                        <li> <a href="#">submenu1</a></li>
+                        <li> <a href="#">submenu2</a></li>
+                    </ul>
+                </li>
+                <li> <a href="# " class="cloud-btn"><img src="Images/Cloudicon.png" alt="">Cloud
+                    <span ><img class="subnav3" src="Images/Righ-Arrow.png" alt="" style="width: 8px;height: 8px;"></span>
+                </a>
+                    <ul class="Cloud-show">
+                        <li> <a href="#">submenu1</a></li>
+                        <li> <a href="#">submenu2</a></li>
+                    </ul>
+                </li>
+                <li> <a href="# " class="team-btn"><img src="Images/TeamIcon.png" alt="">Teams
+                    <span ><img class="subnav4" src="Images/Righ-Arrow.png" alt="" style="width: 8px;height: 8px;"></span>
+                </a>
+                    <ul class="Team-show">
+                        <li> <a href="#">submenu1</a></li>
+                        <li> <a href="#">submenu2</a></li>
+                    </ul>
+                </li>
+                <li> <a href="# " class="Global-btn"><img src="Images/GlobalIcon.png" alt="">Domains
+                    <span ><img class="subnav5" src="Images/Righ-Arrow.png" alt="" style="width: 8px;height: 8px;"></span> 
+                </a>
+                    <ul class="Global-show">
+                        <li> <a href="#">submenu1</a></li>
+                        <li> <a href="#">submenu2</a></li>
+                    </ul>
+                </li>
+                <li> <a href="# " class="Analyics-btn"><img src="Images/AnalyicsIcon.png" alt="">Analytics
+                    <span ><img class="subnav6" src="Images/Righ-Arrow.png" alt="" style="width: 8px;height: 8px;"></span>
+                </a>
+                    <ul class="Anal-show">
+                        <li> <a href="#">submenu1</a></li>
+                        <li> <a href="#">submenu2</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
     
+           </nav>
+       </div>
+       
+    </div>
+    <script>
+        $('.people-btn').click(function(){
+            $('.menuNav nav ul .people-show').toggleClass("showpeoplechild");
+            $('.menuNav nav ul .subnav1').toggleClass("rotatearrow");
+
+        });
+        $('.code-btn').click(function(){
+            $('.menuNav nav ul .Code-show').toggleClass("showcodechild");
+            $('.menuNav nav ul .subnav2').toggleClass("rotatearrow");
+
+        });
+        $('.cloud-btn').click(function(){
+            $('.menuNav nav ul .Cloud-show').toggleClass("showcloudchild");
+            $('.menuNav nav ul .subnav3').toggleClass("rotatearrow");
+
+        });
+        $('.team-btn').click(function(){
+            $('.menuNav nav ul .Team-show').toggleClass("showteamchild");
+            $('.menuNav nav ul .subnav4').toggleClass("rotatearrow");
+
+        });
+        $('.Global-btn').click(function(){
+            $('.menuNav nav ul .Global-show').toggleClass("showglobalchild");
+            $('.menuNav nav ul .subnav5').toggleClass("rotatearrow");
+
+        });
+        $('.Analyics-btn').click(function(){
+            $('.menuNav nav ul .Anal-show').toggleClass("showanalchild");
+            $('.menuNav nav ul .subnav6').toggleClass("rotatearrow");
+
+        });
+    </script>
 </body>
 </html>
